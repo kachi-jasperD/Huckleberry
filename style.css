@@ -10,7 +10,8 @@
 /* style for upper section */
 #upper-section {
   background: #ffffff;
-  min-height: 50vh;
+  height: 50vh;
+  width: 100vw;
 }
 #header {
   font-size: 32px;
@@ -49,7 +50,8 @@ span {
 /* style for bottom section */
 #bottom-section {
   background-color: #666666;
-  min-height: 50vh;
+  height: 50vh;
+  width: 100vw;
 }
 #sub-heading {
   width: 398px;
