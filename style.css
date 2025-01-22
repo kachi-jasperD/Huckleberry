@@ -6,23 +6,40 @@
   box-sizing: border-box;
   font-family: "Lato", serif;
 }
-
-/* style for upper section */
-#upper-section {
-  background: #ffffff;
-  min-height: 50vh;
+body {
+  height: 100vh;
+  width: 100vw;
 }
-#header {
+
+/* first-section */
+
+.first-section {
+  height: 50vh;
+  background: #ffffff;
+}
+h1 {
   font-size: 32px;
   font-weight: 800;
   line-height: 38.4px;
+  text-transform: capitalize;
+  margin-left: 5vw;
+  margin-bottom: 48px;
   text-align: left;
+  padding-top: 96px;
   width: 180px;
   height: 38px;
-  margin-top: 96px;
-  margin-left: 264px;
-  margin-bottom: 48px;
-  text-transform: capitalize;
+}
+
+.first-section p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  width: 90%;
+  /* height: 60px; */
+  margin-top: 26px;
+  margin-left: 5vw;
 }
 span {
   font-size: 20px;
@@ -31,80 +48,137 @@ span {
   text-align: left;
   color: green;
 }
-.upper-section-paragraphs {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: left;
-  width: 415px;
-  height: 60px;
-  margin-top: 26px;
-  margin-left: 264px;
-}
-#usp-1 {
-  margin-bottom: 16px;
-}
 
-/* style for bottom section */
-#bottom-section {
+/* second-section */
+.second-section {
+  /* background-color: red; */
   background-color: #666666;
-  min-height: 50vh;
+  height: 50vh;
 }
-#sub-heading {
-  width: 398px;
-  height: 60px;
+.title {
+  width: 300px;
+  min-height: 60px;
   padding: 16px;
-  margin-left: 232px;
-  gap: 0px;
+  /* gap: 0px; */
   border: 0px 0px 8px 0px;
   opacity: 0px;
   background: #ffbf00;
   border-bottom: 8px solid #cc9900;
+  position: relative;
+  top: 25px;
 }
-.bottom-section {
-  height: 158px;
-  padding: 34.5px 0px;
-}
-#sub-heading {
-  text-align: center;
-  margin-top: 60px;
-  position: absolute;
-  z-index: 1;
-}
-#content {
-  position: absolute;
-  width: 800px;
-  height: 312px;
-  margin-top: 50px;
-  margin-left: 240px;
-  gap: 0px;
+.content {
+  padding-top: 110px;
+  margin-top: -80px;
+  margin-bottom: auto;
+  line-height: 1.1em;
+  gap: 100px;
   border: 0px 0px 8px 0px;
   opacity: 0px;
   background: #ffffff;
+  padding-left: 5vw;
   border-bottom: 8px solid #999999;
 }
-#bsp-1 {
-  width: 752px;
-  height: 120px;
-  margin-top: 92px;
-  margin-left: 24px;
-  gap: 0px;
-  opacity: 0px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  text-align: left;
+.content p:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-#bsp-2 {
-  width: 752px;
-  height: 120px;
-  margin-top: 18px;
-  margin-left: 24px;
-  gap: 0px;
-  opacity: 0px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  text-align: left;
+
+/* media query for viewport from 321px - 375px */
+@media screen and (min-width: 321px) {
+  .title {
+    width: 360px;
+    min-height: 60px;
+    position: relative;
+    top: 40px;
+  }
+  .content {
+    padding-top: 100px;
+    margin-top: -40px;
+  }
+}
+
+/* media query for viewport from 425px - 768px (Tablet) */
+@media screen and (min-width: 426px) {
+  .title {
+    width: 380px;
+    min-height: 60px;
+    position: relative;
+    top: 40px;
+    padding-left: 5vw;
+  }
+  .content {
+    padding-top: 100px;
+    margin-top: -40px;
+    width: 100vw;
+    height: 312px;
+    line-height: 2em;
+  }
+  .first-section p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    width: 415px;
+    height: 60px;
+    margin-top: 26px;
+    margin-left: 5vw;
+  }
+}
+
+/* media query for viewport from 769px - 1439 (Laptop) */
+@media screen and (min-width: 769px) {
+  .first-section {
+    margin-left: 25vw;
+  }
+  .second-section-center {
+    margin-left: 25vw;
+  }
+  .title {
+    width: 40vw;
+    z-index: 2;
+    position: relative;
+    left: 3em;
+  }
+
+  .content {
+    padding-top: 80px;
+    padding-right: 10px;
+    padding-bottom: 225px;
+    margin-top: -40px;
+    width: 50vw;
+    min-height: 100%;
+    line-height: 1.7em;
+    position: relative;
+    left: 50px;
+  }
+}
+
+/* media query for viewport from 1440px - and above (Desktops) */
+@media screen and (min-width: 1440px) {
+  .first-section {
+    margin-left: 25vw;
+  }
+  .second-section-center {
+    margin-left: 25vw;
+  }
+  .title {
+    width: 30vw;
+    z-index: 2;
+    position: relative;
+    left: 3em;
+  }
+
+  .content {
+    padding-top: 100px;
+    padding-right: 50px;
+    padding-bottom: 225px;
+    margin-top: -40px;
+    width: 50vw;
+    min-height: 100%;
+    line-height: 2em;
+    position: relative;
+    left: 50px;
+  }
 }
